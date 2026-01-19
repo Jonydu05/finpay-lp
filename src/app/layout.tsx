@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
-import './globals.css';
 import Header from './layout/header';
+import './globals.css';
 
 const cabinet = localFont({
   src: '../fonts/CabinetGrotesk-Variable.woff2',
