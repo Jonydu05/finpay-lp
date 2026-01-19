@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
-import Header from './layout/header';
 import './globals.css';
+import Header from './layout/header';
 
 const cabinet = localFont({
   src: '../fonts/CabinetGrotesk-Variable.woff2',
@@ -31,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${satoshi.variable} ${cabinet.variable} antialiased`}>
+      <body className={`${satoshi.variable} ${cabinet.variable} antialiased font-sans`}>
         <Header />
         {children}
       </body>
