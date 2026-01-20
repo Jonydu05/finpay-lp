@@ -1,8 +1,9 @@
 @import 'tailwindcss';
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fffefa;
+  --foreground: #170700;
+  --tw-gradient-stops: rgba(255, 251, 235, 1) 0%, rgba(254, 243, 198, 1) 80%, rgba(254, 230, 133, 1) 100%;
 }
 
 @theme inline {
@@ -15,15 +16,9 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 body.dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  padding: 0;
-  margin: 0;
+  --background: #2e0f00;
+  --foreground: #ede7d8;
+  --tw-gradient-stops: rgba(46, 15, 0, 1) 0%, rgba(59, 22, 3, 1) 80%, rgba(79, 31, 6, 1) 100%;
 }
 
 html {
