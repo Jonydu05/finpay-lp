@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${satoshi.variable} ${cabinet.variable} p-0 m-0 antialiased font-sans text-foreground bg-background bg-linear-180`}>
+        className={`${satoshi.variable} ${cabinet.variable} p-0 m-0 antialiased font-sans text-foreground bg-background bg-linear-180 transition-all duration-700 ease-linear`}>
         <Header />
         {children}
       </body>
