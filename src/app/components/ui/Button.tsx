@@ -10,8 +10,9 @@ export default function Button({ children, onAction, ...props }: Props) {
   return (
     <button
       {...props}
-      className='flex gap-2 items-center px-6 py-2.5 rounded-xl bg-amber-600 text-gray-50 hover:bg-amber-700 transition-colors duration-300 cursor-pointer border-none focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2'
-      onClick={onAction}>
+      className="flex gap-2 items-center px-6 py-2.5 rounded-xl bg-amber-600 dark:bg-amber-900 text-gray-50 hover:bg-amber-700 dark:hover:bg-amber-950  transition-colors duration-300 cursor-pointer border-none focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
+      onClick={onAction}
+    >
       {children}
     </button>
   );

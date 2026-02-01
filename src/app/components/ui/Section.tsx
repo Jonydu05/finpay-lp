@@ -7,10 +7,24 @@ type Props = {
   sectionClassName?: string;
 };
 
-export default function Section({ children, containerClassName, sectionClassName, id }: Props) {
+export default function Section({
+  children,
+  containerClassName,
+  sectionClassName,
+  id,
+}: Props) {
   return (
-    <section className={'layout ' + (sectionClassName ? sectionClassName : '')} id={id}>
-      <div className={'container ' + (containerClassName ? containerClassName : '')}>{children}</div>
+    <section
+      className={'layout ' + (sectionClassName ? sectionClassName : '')}
+      id={id}
+    >
+      <div
+        className={
+          'container ' + (containerClassName ? containerClassName : '')
+        }
+      >
+        {children}
+      </div>
     </section>
   );
 }
