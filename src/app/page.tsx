@@ -1,5 +1,10 @@
 'use client';
-import { ArrowUpRightIcon } from '@phosphor-icons/react';
+import {
+  ArrowUpRightIcon,
+  CreditCardIcon,
+  BankIcon,
+  ShieldCheckIcon,
+} from '@phosphor-icons/react';
 import Image from 'next/image';
 import HeroImage from '../images/hero-image.png';
 import Button from './components/ui/Button';
@@ -11,7 +16,7 @@ export default function Home() {
     <>
       <Section containerClassName="flex gap-8 items-start" id="home">
         <div className="w-1/2 h-full flex flex-col gap-6 mt-16">
-          <h1 className="text-6xl font-semibold leading-tight">
+          <h1 className="text-6xl/tight font-semibold">
             <span className="font-extrabold">Get paid early</span>
             <br />
             save automatically <br />
@@ -176,8 +181,49 @@ export default function Home() {
         </figure>
       </Section>
 
-      <Section sectionClassName="min-h-screen" id="products">
-        <div>Products Section</div>
+      <Section sectionClassName="mt-32" id="products">
+        <div className="gap-4 flex flex-col bg-amber-50 rounded-3xl dark:bg-amber-900 shadow-2xl xl:p-24 lg:p-16 md:p-12 sm:p-8 p-6">
+          <span className="font-semibold text-sm text-amber-600">
+            FUTURE PAYMENT
+          </span>
+          <div className="w-full flex gap-16 mb-12 justify-between">
+            <h2 className="text-5xl w-full font-serif font-bold">
+              Experience that grows with your scale.
+            </h2>
+            <p className="text-lg text-wrap max-w-[32ch]">
+              Design a financial operating system that works for your business
+              and streamlined cash flow management
+            </p>
+          </div>
+          <div className="w-full flex gap-8 items-center justify-between">
+            <div>
+              <CreditCardIcon size={64} />
+              <h4 className="text-2xl font-semibold">Free transfers</h4>
+              <p>
+                Create a financial experience and automate repeat purchases by
+                scheduling recurring payments.
+              </p>
+            </div>
+
+            <div>
+              <BankIcon size={64} />
+              <h4 className="text-2xl font-semibold">Multiple account</h4>
+              <p>
+                Run your operations with cash form your account and generate
+                yield on funds stored in your account.
+              </p>
+            </div>
+
+            <div>
+              <ShieldCheckIcon size={64} />
+              <h4 className="text-2xl font-semibold">Unmatched security</h4>
+              <p>
+                Securely manage your finances with organization-wide MFA,
+                card-locking, and account-level controls.
+              </p>
+            </div>
+          </div>
+        </div>
       </Section>
 
       <Section sectionClassName="min-h-screen" id="customers">
