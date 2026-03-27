@@ -1,12 +1,15 @@
 'use client';
 import {
+  ArrowsLeftRightIcon,
   ArrowUpRightIcon,
-  CreditCardIcon,
   BankIcon,
+  CactusIcon,
+  CreditCardIcon,
   ShieldCheckIcon,
 } from '@phosphor-icons/react';
 import Image from 'next/image';
 import HeroImage from '../images/hero-image.png';
+import BlankCard from './components/ui/BlankCard';
 import Button from './components/ui/Button';
 import Input from './components/ui/Input';
 import Section from './components/ui/Section';
@@ -14,8 +17,11 @@ import Section from './components/ui/Section';
 export default function Home() {
   return (
     <>
-      <Section containerClassName="flex gap-8 items-start" id="home">
-        <div className="w-1/2 h-full flex flex-col gap-6 mt-16">
+      <Section
+        containerClassName="flex gap-8 items-start max-lg:flex-col"
+        id="home"
+      >
+        <div className="lg:w-1/2 h-full flex flex-col gap-6 lg:mt-16">
           <h1 className="text-6xl/tight font-semibold">
             <span className="font-extrabold">Get paid early</span>
             <br />
@@ -164,7 +170,7 @@ export default function Home() {
             </svg>
           </div>
         </div>
-        <figure className="w-1/2">
+        <figure className="lg:w-1/2">
           <Image
             src={HeroImage}
             alt="Um homem com uma blusa amarela com faixas brancas, colocando uma moeda grande em um porquinho de cofre amarelo"
@@ -226,17 +232,74 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section sectionClassName="min-h-screen" id="customers">
-        <div>Customers Section</div>
+      <Section sectionClassName="mt-32" id="customers">
+        <div className="flex justify-center items-center flex-col gap-4">
+          <span className="text-amber-600 text-sm">WHY US</span>
+          <h4 className="text-5xl font-serif">Why they prefer Finpay</h4>
+        </div>
+
+        <div className="grid grid-cols-2 gap-4 mt-8">
+          <BlankCard
+            title="Businesses already running on Finpay"
+            classNames={'flex-col-reverse'}
+          >
+            <h3 className="text-amber-800 text-6xl font-serif font-bold">
+              3k+
+            </h3>
+          </BlankCard>
+
+          <BlankCard
+            title="Instant withdraw yout funds at any time"
+            classNames="flex-col"
+          >
+            <div className="flex gap-1 items-center justify-center">
+              <CactusIcon size={64} weight="fill" />
+              <ArrowsLeftRightIcon size={64} />
+              <BankIcon size={64} />
+            </div>
+          </BlankCard>
+
+          <BlankCard title="No asset volatility" classNames="col-span-2">
+            <p>
+              Generate returns on your cash reservers without making any
+              investments.
+            </p>
+            <div>graph</div>
+          </BlankCard>
+        </div>
       </Section>
 
       <Section sectionClassName="min-h-screen" id="pricing">
-        <div>Pricing Section</div>
+        <div>
+          <span>STEP</span>
+          <h3>Maximize your return with a Reserve account that generates.</h3>
+        </div>
+        <div>
+          <div>
+            <h4>1</h4>
+            <h5>Open your account</h5>
+            <p>Sign up to finpay and set up your account from the dashboard.</p>
+          </div>
+
+          <div>
+            <h4>2</h4>
+            <h5>Transfer your money</h5>
+            <p>
+              Move money from to another account into and start to earning up.
+            </p>
+          </div>
+
+          <div>
+            <h4>3</h4>
+            <h5>Watch your balance grow</h5>
+            <p>
+              Accessed instantly and remain insulated from market volatility.
+            </p>
+          </div>
+        </div>
       </Section>
 
-      <Section sectionClassName="min-h-screen" id="learn">
-        <div>Learn Section</div>
-      </Section>
+      <Section sectionClassName="min-h-screen" id="learn"></Section>
     </>
   );
 }

@@ -14,15 +14,8 @@ export default function Section({
   id,
 }: Props) {
   return (
-    <section
-      className={'layout ' + (sectionClassName ? sectionClassName : '')}
-      id={id}
-    >
-      <div
-        className={
-          'container ' + (containerClassName ? containerClassName : '')
-        }
-      >
+    <section className={'layout ' + (sectionClassName ?? '')} id={id}>
+      <div className={'container ' + (containerClassName ?? '')}>
         {children}
       </div>
     </section>

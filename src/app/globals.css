@@ -42,3 +42,11 @@ html {
     @apply mx-auto px-4 text-gray-800 dark:text-gray-200 font-sans;
   }
 }
+
+.blank-card {
+  @apply flex rounded-lg bg-amber-100 dark:bg-amber-800 p-8 gap-8;
+}
+
+.blank-card h5 {
+  @apply text-3xl font-medium;
+}
